@@ -1,0 +1,8 @@
+services:
+  Contexts.stock.PostgresStockRepository:
+    class: ../../../../../../Contexts/inventory/stock/infrastructure/persistence/PostgresStockRepository
+  Contexts.stock.FindStockProduct:
+    class: ../../../../../../Contexts/inventory/stock/application/find/FindStockProduct
+    arguments: [
+        '@Contexts.stock.PostgresStockRepository'
+    ]

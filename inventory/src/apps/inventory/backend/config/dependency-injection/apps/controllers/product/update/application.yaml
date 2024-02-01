@@ -1,0 +1,4 @@
+services:
+  Apps.controllers.UpdateProductNamePatchController:
+    class: ../../../../../../controllers/product/update/UpdateProductNamePatchController
+    arguments: ['@Contexts.product.UpdateProductName']

@@ -1,0 +1,4 @@
+services:
+  Apps.controllers.CreateSalePostController:
+    class: ../../../../../../controllers/sale/create/CreateSalePostController
+    arguments: ['@Contexts.sale.CreateSale']

@@ -1,0 +1,7 @@
+services:
+  Apps.controllers.FindProductGetController:
+    class: ../../../../../../controllers/product/find/FindProductGetController
+    arguments: ['@Contexts.product.FindProduct']
+  Apps.controllers.FindProductByIdGetController:
+    class: ../../../../../../controllers/product/find/FindProductByIdGetController
+    arguments: ['@Contexts.product.FindProductById']

@@ -1,0 +1,6 @@
+imports:
+  - { resource: ./product/application.yaml }
+  - { resource: ./sale/application.yaml }
+  - { resource: ./inventory/application.yaml }
+  - { resource: ./stock/application.yaml }
+  - { resource: ./apps/application.yaml }

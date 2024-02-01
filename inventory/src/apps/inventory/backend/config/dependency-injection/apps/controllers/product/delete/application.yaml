@@ -1,0 +1,4 @@
+services:
+  Apps.controllers.RemoveProductDeleteController:
+    class: ../../../../../../controllers/product/delete/RemoveProductDeleteController
+    arguments: ['@Contexts.product.RemoveProduct']

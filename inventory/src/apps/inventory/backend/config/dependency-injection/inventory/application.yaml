@@ -1,0 +1,13 @@
+services:
+  Contexts.inventory.PostgresInventoryRepository:
+    class: ../../../../../../Contexts/inventory/inventory/infrastructure/persistence/PostgresInventoryRepository
+  Contexts.inventory.FindInventoryByProduct:
+    class: ../../../../../../Contexts/inventory/inventory/application/find/FindInventoryByProduct
+    arguments: [
+        '@Contexts.inventory.PostgresInventoryRepository'
+    ]
+  Contexts.inventory.UpdateStock:
+    class: ../../../../../../Contexts/inventory/inventory/application/update/UpdateStock
+    arguments: [
+        '@Contexts.inventory.PostgresInventoryRepository'
+    ]

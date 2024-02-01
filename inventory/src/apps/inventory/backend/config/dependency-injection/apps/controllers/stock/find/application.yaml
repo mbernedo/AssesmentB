@@ -1,0 +1,4 @@
+services:
+  Apps.controllers.FindStockProductGetController:
+    class: ../../../../../../controllers/stock/find/FindStockProductGetController
+    arguments: ['@Contexts.stock.FindStockProduct']

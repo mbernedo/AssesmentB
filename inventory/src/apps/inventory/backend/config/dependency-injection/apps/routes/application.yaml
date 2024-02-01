@@ -1,0 +1,15 @@
+services:
+  Apps.routes.ProductRoutes:
+    class: ../../../../routes/ProductRoutes
+    tags:
+      - { name: 'route' }
+
+  Apps.routes.SaleRoutes:
+    class: ../../../../routes/SaleRoutes
+    tags:
+      - { name: 'route' }
+
+  Apps.routes.StockRoutes:
+    class: ../../../../routes/StockRoutes
+    tags:
+      - { name: 'route' }

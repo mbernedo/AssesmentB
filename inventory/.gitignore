@@ -1,0 +1,12 @@
+# NodeJs
+**/node_modules
+# Temp files
+**/*.temp
+**/*.tmp
+**/temp
+/deploy/temp
+package-lock.json
+# Env
+**/*.env
+!.dist.env
+**/*.http

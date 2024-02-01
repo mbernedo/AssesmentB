@@ -1,0 +1,4 @@
+services:
+  Apps.controllers.CreateProductPostController:
+    class: ../../../../../../controllers/product/create/CreateProductPostController
+    arguments: ['@Contexts.product.CreateProduct']

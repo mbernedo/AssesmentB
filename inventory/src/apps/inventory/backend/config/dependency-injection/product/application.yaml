@@ -1,0 +1,30 @@
+services:
+  Contexts.product.PostgresProductRepository:
+    class: ../../../../../../Contexts/inventory/product/infrastructure/persistence/PostgresProductRepository
+  Contexts.product.FindProduct:
+    class: ../../../../../../Contexts/inventory/product/application/find/FindProduct
+    arguments: [
+        '@Contexts.product.PostgresProductRepository'
+    ]
+  Contexts.product.FindProductById:
+    class: ../../../../../../Contexts/inventory/product/application/find/FindProductById
+    arguments: [
+        '@Contexts.product.PostgresProductRepository'
+    ]
+  Contexts.product.CreateProduct:
+    class: ../../../../../../Contexts/inventory/product/application/create/CreateProduct
+    arguments: [
+        '@Contexts.product.PostgresProductRepository'
+    ]
+  Contexts.product.UpdateProductName:
+    class: ../../../../../../Contexts/inventory/product/application/update/UpdateProductName
+    arguments: [
+        '@Contexts.product.PostgresProductRepository',
+        '@Contexts.product.FindProductById'
+    ]
+  Contexts.product.RemoveProduct:
+    class: ../../../../../../Contexts/inventory/product/application/delete/RemoveProduct
+    arguments: [
+        '@Contexts.product.PostgresProductRepository',
+        '@Contexts.product.FindProductById'
+    ]

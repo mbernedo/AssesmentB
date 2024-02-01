@@ -1,0 +1,11 @@
+services:
+  Contexts.sale.PostgresSaleRepository:
+    class: ../../../../../../Contexts/inventory/sale/infrastructure/persistence/PostgresSaleRepository
+  Contexts.sale.CreateSale:
+    class: ../../../../../../Contexts/inventory/sale/application/create/CreateSale
+    arguments: [
+        '@Contexts.sale.PostgresSaleRepository',
+        '@Contexts.product.FindProductById',
+        '@Contexts.inventory.FindInventoryByProduct',
+        '@Contexts.inventory.UpdateStock'
+    ]
