@@ -1,7 +1,7 @@
-version: "3"
+version: "3.1"
 services:
   postgres:
-    image: "postgres"
+    image: "postgres:latest"
     restart: always
     ports:
       - "5432:5432"
@@ -11,4 +11,4 @@ services:
       - POSTGRES_PASSWORD=pgadmin
       - POSTGRES_DB=test_db
     volumes:
-      - ./data/db.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
